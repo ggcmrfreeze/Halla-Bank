@@ -1,0 +1,61 @@
+.header {
+  background: #1f1f1f;
+  padding: 16px 0;
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 32px;
+}
+
+.logo {
+  margin-right: 40px;
+}
+
+.nav {
+  display: flex;
+  gap: 28px;
+}
+
+.nav a {
+  font-family: 'Nunito';
+  font-weight: 500;
+  font-size: 17px;
+  color: #bfbfbf;
+  text-decoration: none;
+}
+
+.nav a:hover {
+  color: #fff;
+}
+
+.actions {
+  margin-left: auto;
+  display: flex;
+  gap: 12px;
+}
+
+.btn {
+  font-family: 'Nunito';
+  font-weight: 500;
+  padding: 10px 16px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn.secondary {
+  background: #3a3a3a;
+  color: #fff;
+}
+
+.btn.primary {
+  background: #2d8cff;
+  color: #fff;
+}

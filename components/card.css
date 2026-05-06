@@ -1,0 +1,137 @@
+/* База */
+body {
+    font-family: 'Nunito', sans-serif;
+    background: #1f1f1f;
+    color: #fff;
+    margin: 0;
+}
+
+/* Контейнер (ВАЖНО для сетки) */
+.container {
+    max-width: 1470px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Секция */
+.services {
+    margin-top: 72px;
+}
+
+/* Заголовок */
+.services-title {
+    margin-top: 72px;
+    font-size: 32px;
+    font-weight: 800;
+    background: linear-gradient(90deg, #108BFF, #026ACC);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Подзаголовок */
+.services-subtitle {
+    margin-top: 12px;
+    color: #6E6E6E;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* GRID карточек */
+.cards {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 52px;
+    width: 100%;
+}
+
+/* Карточка */
+.card {
+    background: #f3f3f3;
+    color: #000;
+    border-radius: 20px;
+    padding: 24px;
+    height: 420px; /* фикс высота */
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    transition: 0.25s ease;
+}
+
+/* hover эффект */
+.card:hover {
+    transform: translateY(-6px);
+}
+
+/* активная карточка */
+.card.active {
+    border: 2px solid #108BFF;
+}
+
+/* бейдж */
+.badge {
+    align-self: flex-start;
+    font-size: 12px;
+    padding: 5px 12px;
+    border-radius: 8px;
+    color: #fff;
+    background: linear-gradient(90deg, #0686FE, #045098);
+    margin-bottom: 14px;
+}
+
+/* заголовок карточки */
+.card h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+/* описание */
+.desc {
+    font-size: 13px;
+    color: #6E6E6E;
+    margin-bottom: 12px;
+}
+
+/* список */
+.card ul {
+    padding-left: 16px;
+    margin-bottom: 16px;
+}
+
+.card li {
+    font-size: 13px;
+    color: #6E6E6E;
+    margin-bottom: 6px;
+}
+
+/* цена */
+.price {
+    margin-top: auto;
+    font-size: 16px;
+    font-weight: 700;
+    color: #108BFF;
+    margin-bottom: 14px;
+}
+
+/* кнопки */
+.btn-outline {
+    border: 1px solid #108BFF;
+    background: transparent;
+    color: #000;
+    border-radius: 10px;
+    padding: 10px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn-fill {
+    border: none;
+    background: linear-gradient(90deg, #0686FE, #045098);
+    color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    font-weight: 600;
+    cursor: pointer;
+}
