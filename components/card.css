@@ -8,7 +8,7 @@ body {
 
 /* Контейнер (ВАЖНО для сетки) */
 .container {
-    max-width: 1470px;
+
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -16,7 +16,6 @@ body {
 /* Секция */
 .services {
     margin-top: 72px;
-    
 }
 
 /* Заголовок */
@@ -39,7 +38,7 @@ body {
 
 /* GRID карточек */
 .cards {
-    margin-top: 20px;
+    margin-bottom: 109px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 52px;
@@ -53,11 +52,11 @@ body {
     border-radius: 20px;
     padding: 24px;
     height: 420px; /* фикс высота */
-    width: 100%;
+    max-width: 270px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    transition: 0.25s ease;
+    transition: 0.35s ease;
 }
 
 /* hover эффект */
@@ -73,7 +72,7 @@ body {
 /* бейдж */
 .badge {
     align-self: flex-start;
-    font-size: 12px;
+    font-size: 14px;
     padding: 5px 12px;
     border-radius: 8px;
     color: #fff;
@@ -83,7 +82,7 @@ body {
 
 /* заголовок карточки */
 .card h3 {
-    font-size: 18px;
+    font-size: 24px;
     font-weight: 700;
     margin-bottom: 10px;
 }
@@ -122,7 +121,7 @@ body {
     background: transparent;
     color: #000;
     border-radius: 10px;
-    padding: 10px;
+    padding: 5px;
     font-weight: 600;
     cursor: pointer;
 }
@@ -132,7 +131,7 @@ body {
     background: linear-gradient(90deg, #0686FE, #045098);
     color: #fff;
     border-radius: 10px;
-    padding: 10px;
+    padding: 5px;
     font-weight: 600;
     cursor: pointer;
 }

@@ -1,0 +1,192 @@
+/* =========================
+   СЕКЦИЯ "СЕРВИСЫ"
+========================= */
+
+.services-2 {
+    background: #ffffff;
+    padding: 60px 0;
+    border-radius: 40px 40px 0 0;
+}
+
+.services2-title {
+    font-size: 32px;
+    font-weight: 800;
+    color: #000;
+    margin-bottom: 42px;
+}
+
+/* ОСНОВНОЙ GRID */
+.services2-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 24px;
+    align-items: stretch;
+}
+
+/* =========================
+   ЛЕВАЯ КАРТОЧКА
+========================= */
+
+.exchange-card {
+    background: #f3f3f3;
+    border-radius: 20px;
+    padding: 28px;
+    height: 100%;
+}
+
+/* Верхняя часть */
+.exchange-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.exchange-header h3 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #000;
+}
+
+.currency-type {
+    background: #000;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 16px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* =========================
+   ТАБЛИЦА ВАЛЮТ
+========================= */
+
+.exchange-table {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.exchange-row {
+    display: grid;
+    grid-template-columns: 1fr 100px 100px;
+    align-items: center;
+}
+
+.exchange-row.head {
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.exchange-row.head span:nth-child(2),
+.exchange-row.head span:nth-child(3) {
+    text-align: right;
+}
+
+.exchange-row span:nth-child(2),
+.exchange-row span:nth-child(3) {
+    text-align: right;
+}
+
+.exchange-row:not(.head) span {
+    color: #000;
+    font-weight: 500;
+}
+
+/* Валюта */
+.currency {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.currency img {
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.currency b {
+    color: #000;
+    font-size: 15px;
+}
+
+.currency p {
+    font-size: 12px;
+    color: #666;
+    margin-top: 2px;
+}
+
+/* Ссылка */
+.more {
+    display: inline-block;
+    margin-top: 24px;
+    color: #000;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.more:hover {
+    text-decoration: underline;
+}
+
+/* Подпись */
+.note {
+    margin-top: 16px;
+    font-size: 14px;
+    color: #777;
+    line-height: 1.5;
+}
+
+/* =========================
+   ПРАВАЯ КОЛОНКА
+========================= */
+
+.services-right {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 16px;
+    height: 100%;
+}
+
+/* Карточки */
+.service-box {
+    background: #F2F2F2;
+    border-radius: 18px;
+    padding: 24px;
+    color: #000;
+    display: flex;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    transition: 0.35s ease;
+}
+
+.service-box:hover {
+    transform: translateY(-6px);
+}
+
+.service-box h4 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.service-box p {
+    font-size: 14px;
+    color: #333;
+}
+
+/* Тёмная карточка */
+.service-box.dark {
+    background: #000;
+    color: #fff;
+}
+
+.service-box.dark p {
+    color: #ccc;
+}
