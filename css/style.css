@@ -1,6 +1,9 @@
 /* =========================
    СЕКЦИЯ "СЕРВИСЫ"
 ========================= */
+html {
+  scroll-behavior: smooth;
+}
 
 .services-2 {
     background: #ffffff;

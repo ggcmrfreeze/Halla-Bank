@@ -9,6 +9,9 @@
   <link rel="stylesheet" href="css/basic/fonts.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="components/card.css">
+  <link rel="stylesheet" href="js/slider.js">
+  <link rel="stylesheet" href="components/insurance.css">
+  <link rel="stylesheet" href="components/halla_mobile.css">
   <link rel="stylesheet" href="components/header.css">
   <link rel="stylesheet" href="components/footer.css">
 </head>
@@ -22,8 +25,8 @@
       </div>
 
       <nav class="nav">
-        <a href="#">Сервисы</a>
-        <a href="#">Halla-Мобайл</a>
+        <a href="#services-2">Сервисы</a>
+        <a href="#halla-mobile">Halla-Мобайл</a>
         <a href="#">Страхование</a>
         <a href="#">Крупному бизнесу</a>
       </nav>
@@ -32,7 +35,7 @@
         <button class="btn secondary">Стать клиентом</button>
         <button class="btn primary">Войти</button>
       </div>
-      </div>
+    </div>
   </header>
   <div class="container">
     <h2 class="services-title">Наши услуги</h2>
@@ -43,164 +46,284 @@
   </div>
   <section class="services">
     <div class="container">
-<div class="cards">
-      <div class="card">
-        <span class="badge">Популярно</span>
-        <h3>Ипотека под выгодный процент</h3>
-        <p class="desc">
-          Льготная ставка до 6.7% годовых первоначальном взносе от 20%.
-        </p>
-        <ul>
-          <li>Срок до 30 лет</li>
-          <li>Быстрое одобрение</li>
-          <li>Индивидуальные условия</li>
-        </ul>
-        <div class="price">от 6.7% годовых</div>
-        <button class="btn-outline">Подать заявку</button>
-      </div>
+      <div class="cards">
+        <div class="card">
+          <span class="badge">Популярно</span>
+          <h3>Ипотека под выгодный процент</h3>
+          <p class="desc">
+            Льготная ставка до 6.7% годовых первоначальном взносе от 20%.
+          </p>
+          <ul>
+            <li>Срок до 30 лет</li>
+            <li>Быстрое одобрение</li>
+            <li>Индивидуальные условия</li>
+          </ul>
+          <div class="price">от 6.7% годовых</div>
+          <button class="btn-outline">Подать заявку</button>
+        </div>
 
-      <div class="card">
-        <span class="badge">Кредит</span>
-        <h3>Кредит наличными онлайн</h3>
-        <p class="desc">
-          Одобрение за 15 минут, без залога, на любые цели.
-        </p>
-        <ul>
-          <li>Сумма до 2 млн ₽</li>
-          <li>Без справок о доходах</li>
-          <li>Гибкие сроки погашения</li>
-        </ul>
-        <div class="price">до 2 000 000 ₽</div>
-        <button class="btn-outline">Оформить онлайн</button>
-      </div>
+        <div class="card">
+          <span class="badge">Кредит</span>
+          <h3>Кредит наличными онлайн</h3>
+          <p class="desc">
+            Одобрение за 15 минут, без залога, на любые цели.
+          </p>
+          <ul>
+            <li>Сумма до 2 млн ₽</li>
+            <li>Без справок о доходах</li>
+            <li>Гибкие сроки погашения</li>
+          </ul>
+          <div class="price">до 2 000 000 ₽</div>
+          <button class="btn-outline">Оформить онлайн</button>
+        </div>
 
-      <div class="card active">
-        <span class="badge">Карта</span>
-        <h3>Премиальная карта с кешбеком</h3>
-        <p class="desc">
-          До 5% кешбека на покупки и привилегии в партнёрской сети.
-        </p>
-        <ul>
-          <li>Бесплатное обслуживание</li>
-          <li>Снятие без комиссии</li>
-          <li>Персональный менеджер</li>
-        </ul>
-        <div class="price">0 ₽/мес</div>
-        <button class="btn-fill">Оформить</button>
-      </div>
+        <div class="card active">
+          <span class="badge">Карта</span>
+          <h3>Премиальная карта с кешбеком</h3>
+          <p class="desc">
+            До 5% кешбека на покупки и привилегии в партнёрской сети.
+          </p>
+          <ul>
+            <li>Бесплатное обслуживание</li>
+            <li>Снятие без комиссии</li>
+            <li>Персональный менеджер</li>
+          </ul>
+          <div class="price">0 ₽/мес</div>
+          <button class="btn-fill">Оформить</button>
+        </div>
 
-      <div class="card">
-        <span class="badge">Инвестиции</span>
-        <h3>Брокерское обслуживание</h3>
-        <p class="desc">
-          Разнообразные инвестиционные решения под ваш риск-профиль.
-        </p>
-        <ul>
-          <li>Диверсифицированный портфель</li>
-          <li>Пробные сделки без комиссии</li>
-          <li>Индивидуальные условия</li>
-        </ul>
-        <div class="price">от 0 ₽</div>
-        <button class="btn-outline">Подробнее</button>
-      </div>
+        <div class="card">
+          <span class="badge">Инвестиции</span>
+          <h3>Брокерское обслуживание</h3>
+          <p class="desc">
+            Разнообразные инвестиционные решения под ваш риск-профиль.
+          </p>
+          <ul>
+            <li>Диверсифицированный портфель</li>
+            <li>Пробные сделки без комиссии</li>
+            <li>Индивидуальные условия</li>
+          </ul>
+          <div class="price">от 0 ₽</div>
+          <button class="btn-outline">Подробнее</button>
+        </div>
 
-    </div>
+      </div>
     </div>
   </section>
 
   <section class="services-2">
-      <div class="container">
-    <h2 class="services2-title">Сервисы</h2>
-  </div>
-
-  <div class="container">
-
-    <div class="services2-grid">
-
-      <!-- ЛЕВАЯ БОЛЬШАЯ КАРТОЧКА -->
-      <div class="exchange-card">
-        <div class="exchange-header">
-          <h3>Курсы валют</h3>
-          <button class="currency-type">Наличные ▼</button>
-        </div>
-
-        <div class="exchange-table">
-
-          <div class="exchange-row head">
-            <span>Валюта</span>
-            <span>Продать</span>
-            <span>Купить</span>
-          </div>
-
-          <div class="exchange-row">
-            <div class="currency">
-              <img src="images/us.svg" alt="">
-              <div>
-                <b>USD</b>
-                <p>Доллар США</p>
-              </div>
-            </div>
-            <span>73</span>
-            <span>76.1</span>
-          </div>
-
-          <div class="exchange-row">
-            <div class="currency">
-              <img src="images/eu.svg" alt="">
-              <div>
-                <b>EUR</b>
-                <p>Евро</p>
-              </div>
-            </div>
-            <span>90</span>
-            <span>95.91</span>
-          </div>
-
-          <div class="exchange-row">
-            <div class="currency">
-              <img src="images/cn.svg" alt="">
-              <div>
-                <b>CNY</b>
-                <p>Китайский юань</p>
-              </div>
-            </div>
-            <span>11.1</span>
-            <span>11.35</span>
-          </div>
-
-        </div>
-
-        <a href="###" class="more">Другие валюты ></a>
-
-        <p class="note">
-        Информация о курсах обмена иностранных валют является  справочной и может меняться в течение дня. Точную информацию  о курсах можно узнать в интернет-банке.
-        </p>
-      </div>
-
-      <!-- ПРАВАЯ КОЛОНКА -->
-      <div class="services-right">
-
-        <div class="service-box">
-          <h4>Платежи и переводы</h4>
-          <p>Оплачивайте и переводите без комиссии</p>
-        </div>
-
-        <div class="service-box">
-          <h4>Купить или продать недвижимость</h4>
-          <p>Сделка под ключ, быстро и безопасно</p>
-        </div>
-
-        <div class="service-box dark">
-          <h4>Поддержка</h4>
-          <p>Любой вопрос решим по телефону или в чате</p>
-        </div>
-
-      </div>
-
+    <div class="container">
+      <h2 id="services-2" class="services2-title">Сервисы</h2>
     </div>
-  </div>
-</section>
 
+    <div class="container">
+
+      <div class="services2-grid">
+
+        <div class="exchange-card">
+          <div class="exchange-header">
+            <h3>Курсы валют</h3>
+            <button class="currency-type">Наличные ▼</button>
+          </div>
+
+          <div class="exchange-table">
+
+            <div class="exchange-row head">
+              <span>Валюта</span>
+              <span>Продать</span>
+              <span>Купить</span>
+            </div>
+
+            <div class="exchange-row">
+              <div class="currency">
+                <img src="images/us.svg" alt="">
+                <div>
+                  <b>USD</b>
+                  <p>Доллар США</p>
+                </div>
+              </div>
+              <span>73</span>
+              <span>76.1</span>
+            </div>
+
+            <div class="exchange-row">
+              <div class="currency">
+                <img src="images/eu.svg" alt="">
+                <div>
+                  <b>EUR</b>
+                  <p>Евро</p>
+                </div>
+              </div>
+              <span>90</span>
+              <span>95.91</span>
+            </div>
+
+            <div class="exchange-row">
+              <div class="currency">
+                <img src="images/cn.svg" alt="">
+                <div>
+                  <b>CNY</b>
+                  <p>Китайский юань</p>
+                </div>
+              </div>
+              <span>11.1</span>
+              <span>11.35</span>
+            </div>
+
+          </div>
+
+          <a href="###" class="more">Другие валюты ></a>
+
+          <p class="note">
+            Информация о курсах обмена иностранных валют является справочной и может меняться в течение дня. Точную
+            информацию о курсах можно узнать в интернет-банке.
+          </p>
+        </div>
+
+        <div class="services-right">
+
+          <div class="service-box">
+            <h4>Платежи и переводы</h4>
+            <p>Оплачивайте и переводите без комиссии</p>
+          </div>
+
+          <div class="service-box">
+            <h4>Купить или продать недвижимость</h4>
+            <p>Сделка под ключ, быстро и безопасно</p>
+          </div>
+
+          <div class="service-box dark">
+            <h4>Поддержка</h4>
+            <p>Любой вопрос решим по телефону или в чате</p>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <section class="halla-mobile">
+    <div class="container">
+      <h2 id="halla-mobile" class="services2-title">Halla-Мобайл</h2>
+    </div>
+    <div class="container">
+
+      <div class="halla-mobile__grid">
+
+        <div class="card-mobile card-mobile--left">
+          <div class="card-mobile__content">
+            <h3>Halla-выгодная связь</h3>
+            <p>50 ГБ, 2000 мин, — от 399₽</p>
+          </div>
+
+          <div class="card-mobile__image-wrap">
+            <img src="images/Halla-Mobile.png" alt="" class="card-mobile__image card-mobile__image--left">
+          </div>
+        </div>
+
+        <div class="halla-mobile__right">
+
+          <div class="card-mobile card-mobile--top">
+            <div class="card-mobile__content">
+              <h3>Безлимитный интернет</h3>
+              <p>Бесплатно и навсегда с тарифом Плюс</p>
+            </div>
+
+            <div class="card-mobile__image-wrap">
+              <img src="images/halla-mobile-2.png" alt="" class="card-mobile__image card-mobile__image--top">
+            </div>
+          </div>
+
+          <a href="####" class="card-mobile card-mobile--bottom">
+            <span>Оформить и заказать SIM</span>
+
+            <div class="card-mobile__arrow">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 12H19" stroke="black" stroke-width="2" stroke-linecap="round" />
+                <path d="M13 6L19 12L13 18" stroke="black" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="insurance-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Страхование</h2>
+        <div class="slider-controls">
+          <div class="swiper-button-prev-custom"></div>
+          <div class="swiper-button-next-custom"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="swiper insurance-slider">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide carding purple">
+          <h3>Страхование вкладов</h3>
+          <p>Ваши средства защищены государственной системой страхования вкладов. В случае отзыва лицензии у банка вы
+            получите компенсацию до 1,4 млн рублей.</p>
+          <a href="#" class="btn">Подробнее</a>
+        </div>
+        <div class="swiper-slide carding green">
+          <h3>Защита счетов</h3>
+          <p>Денежные средства на счетах физических лиц защищены системой страхования вкладов. И еще больше
+            возможностей.</p>
+          <a href="#" class="btn">Подробнее</a>
+        </div>
+        <div class="swiper-slide carding cyan">
+          <h3>Лимит страхования</h3>
+          <p>Максимальная сумма страхового возмещения составляет 1,4 млн рублей на одного вкладчика.</p>
+          <a href="#" class="btn">Узнать больше</a>
+        </div>
+        <div class="swiper-slide carding purple">
+          <h3>Страхование КАСКО</h3>
+          <p>Защитите свой автомобиль от угона и повреждений. Оформление полиса онлайн за 5 минут.</p>
+          <a href="#" class="btn">Подробнее</a>
+        </div>
+        <div class="swiper-slide carding green">
+          <h3>ДМС для всей семьи</h3>
+          <p>Качественная медицинская помощь в лучших клиниках города. Программы для детей и взрослых.</p>
+          <a href="#" class="btn">Подробнее</a>
+        </div>
+        <div class="swiper-slide carding cyan">
+          <h3>Страхование жилья</h3>
+          <p>Надёжная защита вашей квартиры или дома. Страхование отделки, мебели и гражданской ответственности.</p>
+          <a href="#" class="btn">Подробнее</a>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const swiper = new Swiper('.insurance-slider', {
+        slidesPerView: 1,
+        spaceBetween: 20,
+
+        navigation: {
+          nextEl: '.swiper-button-next-custom',
+          prevEl: '.swiper-button-prev-custom',
+        },
+
+        breakpoints: {
+          768: {
+            slidesPerView: 2,
+          },
+          1024: {
+            slidesPerView: 3,
+          }
+        }
+      });
+    });
+  </script>
 </body>
 
 </html>

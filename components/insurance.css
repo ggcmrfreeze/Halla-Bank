@@ -1,0 +1,138 @@
+:root {
+    --bg-purple: #D7B1FF;
+    --bg-green: #A8D5BA;
+    --bg-cyan: #A6F9FF;
+    --dark-btn: #333333;
+}
+
+.insurance-section {
+    padding: 50px 20px;
+    font-family: 'Nunito', sans-serif;
+    background-color: #fff;
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+
+    margin-bottom: 30px;
+}
+
+.section-title {
+    color: black;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+/* Кнопки управления */
+.slider-controls {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    margin-left: auto;
+}
+
+.swiper-button-prev-custom,
+.swiper-button-next-custom {
+    width: 45px;
+    height: 45px;
+    background-color: var(--dark-btn);
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s;
+}
+
+.swiper-button-prev-custom::after,
+.swiper-button-next-custom::after {
+    content: '';
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+}
+
+.swiper-button-prev-custom::after {
+    transform: rotate(135deg);
+    margin-left: 3px;
+}
+
+.swiper-button-next-custom::after {
+    transform: rotate(-45deg);
+    margin-right: 3px;
+}
+
+.carding {
+    padding: 30px;
+    border-radius: 20px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.carding h3 {
+    color: #000000;
+    font-size: 23px;
+    margin-top: 0;
+    margin-bottom: 36px;
+}
+
+.carding p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #000000;
+    flex-grow: 1;
+    margin-bottom: 35px;
+}
+
+.purple {
+    background-color: var(--bg-purple);
+}
+
+.green {
+    background-color: var(--bg-green);
+}
+
+.cyan {
+    background-color: var(--bg-cyan);
+}
+
+.btn {
+    background: white;
+    padding: 12px 25px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    display: inline-block;
+    width: fit-content;
+    font-size: 14px;
+}
+
+.slider-controls {
+    display: flex;
+    gap: 12px;
+    margin-left: auto;
+}
+
+.swiper-button-prev-custom:hover,
+.swiper-button-next-custom:hover {
+    opacity: 0.8;
+}
+
+.swiper-slide {
+    height: auto;
+}
+
+.swiper {
+    width: 100%;
+    overflow: hidden;
+}
