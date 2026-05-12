@@ -1,0 +1,235 @@
+.footer {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 48px 0 0 0;
+  border-radius: 40px 16px 0 0;
+
+}
+.footer-top {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 110px;
+  padding-bottom: 40px;
+}
+
+.footer-col h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #ffffff;
+}
+
+.footer-col-sub {
+  margin-top: 32px;
+}
+
+.footer-col-sub h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #ffffff;
+}
+
+/* ---- Contact info ---- */
+.footer-label {
+  font-size: 13px;
+  color: #6E6E6E;
+  margin-bottom: 2px;
+  margin-top: 14px;
+}
+
+.footer-phone {
+  font-size: 15px;
+  font-weight: 600;
+  color: #ffffff;
+  text-decoration: none;
+  display: block;
+}
+
+.footer-link-plain {
+  font-size: 14px;
+  color: #ffffff;
+  text-decoration: none;
+  display: block;
+}
+
+.footer-link-plain:hover {
+  text-decoration: underline;
+}
+
+/* ---- PDF download button ---- */
+.footer-download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #2a2a2a;
+  border: 1px solid #3a3a3a;
+  border-radius: 20px;
+  padding: 9px 16px;
+  color: #ffffff;
+  font-size: 14px;
+  text-decoration: none;
+  transition: background 0.2s;
+  cursor: pointer;
+}
+
+.footer-download-btn:hover {
+  background: #333333;
+}
+
+.footer-pdf-icon {
+  width: 28px;
+  height: 28px;
+  background: #e74c3c;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: 700;
+  color: #ffffff;
+  flex-shrink: 0;
+}
+
+/* ---- Nav links ---- */
+.footer-nav-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-nav-col ul li {
+  margin-bottom: 10px;
+}
+
+.footer-nav-col ul li a {
+  font-size: 14px;
+  color: #c0c0c0;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-nav-col ul li a:hover {
+  color: #ffffff;
+}
+
+/* ---- App download button ---- */
+.footer-app-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #2a2a2a;
+  border: 1px solid #3a3a3a;
+  border-radius: 20px;
+  padding: 10px 18px;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.2s;
+  cursor: pointer;
+}
+
+.footer-app-btn:hover {
+  background: #333333;
+}
+
+.footer-app-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #3a8ef6, #1a5ec4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.footer-app-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* ---- Language buttons ---- */
+.footer-lang-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.footer-lang-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #2a2a2a;
+  border: 1px solid #3a3a3a;
+  border-radius: 20px;
+  padding: 7px 14px;
+  color: #ffffff;
+  font-size: 14px;
+  text-decoration: none;
+  transition: background 0.2s;
+  cursor: pointer;
+}
+
+.footer-lang-btn:hover {
+  background: #333333;
+}
+
+.footer-flag {
+  font-size: 18px;
+}
+
+/* ---- Location ---- */
+.footer-location-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  color: #c0c0c0;
+}
+
+/* ---- Divider ---- */
+.footer-divider {
+    width: 100%;
+
+  border: none;
+  border-top: 2px solid #6E6E6E;
+  margin: 0;
+}
+
+/* ---- Legal text ---- */
+.footer-legal {
+  padding: 24px 0 32px;
+}
+
+.footer-legal p {
+  font-size: 13px;
+  color: #6E6E6E;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ===========================
+   RESPONSIVE
+   =========================== */
+@media (max-width: 1024px) {
+  .footer-top {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .footer {
+    border-radius: 12px 12px 0 0;
+    padding: 32px 0 0 0;
+  }
+}

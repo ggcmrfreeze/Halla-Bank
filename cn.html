@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>哈拉银行</title>
+  <link rel="stylesheet" href="css/global/reset.css">
+  <link rel="stylesheet" href="css/basic/fonts.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="components/card.css">
+  <link rel="stylesheet" href="js/slider.js">
+  <link rel="stylesheet" href="components/insurance.css">
+  <link rel="stylesheet" href="components/halla_mobile.css">
+  <link rel="stylesheet" href="components/header.css">
+  <link rel="stylesheet" href="components/lastsection.css">
+  <link rel="stylesheet" href="components/footer.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="logo">
+        <img src="images/Logo.png" alt="halla">
+      </div>
+      <nav class="nav">
+        <a href="#services-2">服务</a>
+        <a href="#halla-mobile">哈拉移动</a>
+        <a href="#carding">保险</a>
+        <a href="#big_business">企业服务</a>
+      </nav>
+      <div class="actions">
+        <button class="btn secondary">成为客户</button>
+        <button class="btn primary">登录</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <h2 class="services-title">我们的服务</h2>
+  </div>
+  <div class="container">
+    <p class="services-subtitle">向上滑动卡片以查看所有优惠。<br> 配色方案已更换为蓝色。</p>
+  </div>
+
+  <section class="services">
+    <div class="container">
+      <div class="cards">
+
+        <div class="card">
+          <span class="badge">热门</span>
+          <h3>优惠利率房贷</h3>
+          <p class="desc">
+            首付20%起，年利率最低6.7%的优惠房贷。
+          </p>
+          <ul>
+            <li>期限最长30年</li>
+            <li>快速审批</li>
+            <li>个性化条款</li>
+          </ul>
+          <div class="price">年利率低至6.7%</div>
+          <button class="btn-outline">立即申请</button>
+        </div>
+
+        <div class="card">
+          <span class="badge">贷款</span>
+          <h3>在线现金贷款</h3>
+          <p class="desc">
+            15分钟审批，无需抵押，用途不限。
+          </p>
+          <ul>
+            <li>最高200万₽</li>
+            <li>无需收入证明</li>
+            <li>灵活还款期限</li>
+          </ul>
+          <div class="price">最高 2,000,000 ₽</div>
+          <button class="btn-outline">在线申请</button>
+        </div>
+
+        <div class="card active">
+          <span class="badge">银行卡</span>
+          <h3>高级返现银行卡</h3>
+          <p class="desc">
+            消费最高5%返现，享受合作伙伴网络特权。
+          </p>
+          <ul>
+            <li>免年费</li>
+            <li>免手续费取现</li>
+            <li>专属客户经理</li>
+          </ul>
+          <div class="price">0 ₽/月</div>
+          <button class="btn-fill">立即办理</button>
+        </div>
+
+        <div class="card">
+          <span class="badge">投资</span>
+          <h3>经纪服务</h3>
+          <p class="desc">
+            根据您的风险偏好提供多样化投资解决方案。
+          </p>
+          <ul>
+            <li>多元化投资组合</li>
+            <li>免佣金试单</li>
+            <li>个性化条款</li>
+          </ul>
+          <div class="price">低至 0 ₽</div>
+          <button class="btn-outline">了解更多</button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="services-2">
+    <div class="container">
+      <h2 id="services-2" class="services2-title">服务</h2>
+    </div>
+    <div class="container">
+      <div class="services2-grid">
+
+        <div class="exchange-card">
+          <div class="exchange-header">
+            <h3>汇率</h3>
+            <button class="currency-type">现金 ▼</button>
+          </div>
+          <div class="exchange-table">
+            <div class="exchange-row head">
+              <span>货币</span>
+              <span>卖出</span>
+              <span>买入</span>
+            </div>
+            <div class="exchange-row">
+              <div class="currency">
+                <img src="images/us.svg" alt="">
+                <div><b>USD</b><p>美元</p></div>
+              </div>
+              <span>73</span>
+              <span>76.1</span>
+            </div>
+            <div class="exchange-row">
+              <div class="currency">
+                <img src="images/eu.svg" alt="">
+                <div><b>EUR</b><p>欧元</p></div>
+              </div>
+              <span>90</span>
+              <span>95.91</span>
+            </div>
+            <div class="exchange-row">
+              <div class="currency">
+                <img src="images/cn.svg" alt="">
+                <div><b>CNY</b><p>人民币</p></div>
+              </div>
+              <span>11.1</span>
+              <span>11.35</span>
+            </div>
+          </div>
+          <a href="###" class="more">其他货币 ></a>
+          <p class="note">
+            外币汇率信息仅供参考，可能在一天内发生变化。
+            精确汇率请在网上银行查询。
+          </p>
+        </div>
+
+        <div class="services-right">
+          <div class="service-box">
+            <h4>支付与转账</h4>
+            <p>免手续费支付和转账</p>
+          </div>
+          <div class="service-box">
+            <h4>买卖房产</h4>
+            <p>一站式交易，快捷安全</p>
+          </div>
+          <div class="service-box dark">
+            <h4>客户支持</h4>
+            <p>通过电话或在线聊天解决任何问题</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="halla-mobile">
+    <div class="container">
+      <h2 id="halla-mobile" class="services2-title">哈拉移动</h2>
+    </div>
+    <div class="container">
+      <div class="halla-mobile__grid">
+
+        <div class="card-mobile card-mobile--left">
+          <div class="card-mobile__content">
+            <h3>哈拉 – 超值通信</h3>
+            <p>50 GB，2000分钟 — 低至399₽</p>
+          </div>
+          <div class="card-mobile__image-wrap">
+            <img src="images/Halla-Mobile.png" alt="" class="card-mobile__image card-mobile__image--left">
+          </div>
+        </div>
+
+        <div class="halla-mobile__right">
+          <div class="card-mobile card-mobile--top">
+            <div class="card-mobile__content">
+              <h3>无限流量</h3>
+              <p>选择Plus套餐，永久免费</p>
+            </div>
+            <div class="card-mobile__image-wrap">
+              <img src="images/halla-mobile-2.png" alt="" class="card-mobile__image card-mobile__image--top">
+            </div>
+          </div>
+          <a href="####" class="card-mobile card-mobile--bottom">
+            <span>办理并订购SIM卡</span>
+            <div class="card-mobile__arrow">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 12H19" stroke="black" stroke-width="2" stroke-linecap="round" />
+                <path d="M13 6L19 12L13 18" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="insurance-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 id="carding" class="section-title">保险</h2>
+        <div class="slider-controls">
+          <div class="swiper-button-prev-custom"></div>
+          <div class="swiper-button-next-custom"></div>
+        </div>
+      </div>
+    </div>
+    <div class="swiper insurance-slider">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide carding purple">
+          <h3>存款保险</h3>
+          <p>您的资金受国家存款保险体系保护。若银行被吊销执照，您将获得最高140万卢布的赔偿。</p>
+          <a href="#" class="btn">了解更多</a>
+        </div>
+        <div class="swiper-slide carding green">
+          <h3>账户保障</h3>
+          <p>个人账户资金受存款保险体系保障，并提供更多保障选项。</p>
+          <a href="#" class="btn">了解更多</a>
+        </div>
+        <div class="swiper-slide carding cyan">
+          <h3>保险限额</h3>
+          <p>每位存款人最高保险赔偿金额为140万卢布。</p>
+          <a href="#" class="btn">详细了解</a>
+        </div>
+        <div class="swiper-slide carding purple">
+          <h3>车辆综合保险</h3>
+          <p>保护您的车辆免受盗窃和损坏。5分钟内在线完成投保。</p>
+          <a href="#" class="btn">了解更多</a>
+        </div>
+        <div class="swiper-slide carding green">
+          <h3>家庭医疗保险</h3>
+          <p>在城市最优质的诊所享受高质量医疗服务，提供儿童和成人方案。</p>
+          <a href="#" class="btn">了解更多</a>
+        </div>
+        <div class="swiper-slide carding cyan">
+          <h3>房屋保险</h3>
+          <p>为您的公寓或房屋提供可靠保障，包括装修、家具及第三方责任险。</p>
+          <a href="#" class="btn">了解更多</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="business-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 id="big_business" class="section-title">企业服务</h2>
+      </div>
+    </div>
+    <div class="container">
+      <div class="business-section__wrapper">
+        <a href="#" class="business-banner">
+          <img src="images/cn_banner.gif" alt="banner" class="business-banner__image">
+        </a>
+        <div class="business-video">
+          <video class="business-video__player" src="videos/business.mp4" poster="images/video-preview.jpg" controls></video>
+        </div>
+        <a href="#" class="business-banner">
+          <img src="images/cn_banner.gif" alt="banner" class="business-banner__image">
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+
+        <div class="footer-col">
+          <h4>联系银行</h4>
+          <div class="footer-label">企业客户</div>
+          <a href="tel:+79999999999" class="footer-phone">+7 952 872 92 08</a>
+          <div class="footer-label">个人客户</div>
+          <a href="#" class="footer-link-plain">致电银行</a>
+          <div class="footer-label">境外来电</div>
+          <a href="tel:+79999995555" class="footer-phone">+7 999 999 55 55</a>
+          <div class="footer-col-sub">
+            <h4>下载报告</h4>
+            <a href="#" class="footer-download-btn">
+              <img src="images/pdf.svg" alt="">
+              网站报告
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <div class="footer-nav-col">
+            <h4>服务</h4>
+            <ul>
+              <li><a href="#">汇率</a></li>
+              <li><a href="#">贵金属价格</a></li>
+              <li><a href="#">营业网点</a></li>
+              <li><a href="#">ATM机</a></li>
+              <li><a href="#">银行卡激活</a></li>
+            </ul>
+          </div>
+          <div class="footer-col-sub">
+            <h4>下载应用</h4>
+            <a href="#" class="footer-app-btn">
+              <div class="footer-app-icon">
+                <img src="images/halla-mobile-app.svg" alt="Halla">
+              </div>
+              哈拉银行
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <div class="footer-nav-col">
+            <h4>银行</h4>
+            <ul>
+              <li><a href="#">关于我们</a></li>
+              <li><a href="#">新闻中心</a></li>
+              <li><a href="#">银行信息</a></li>
+              <li><a href="#">招聘</a></li>
+              <li><a href="#">费率与文件</a></li>
+            </ul>
+          </div>
+          <div class="footer-col-sub">
+            <h4>外籍客户服务</h4>
+            <div class="footer-lang-row">
+              <a href="eng.html" class="footer-lang-btn">
+                <img src="images/us.svg" alt="EN" class="footer-lang-icon">
+                Eng
+              </a>
+              <a href="index.html" class="footer-lang-btn">
+                <img src="images/ru.svg" alt="RU" class="footer-lang-icon">
+                Рус
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <div class="footer-nav-col">
+            <h4>客户支持</h4>
+            <ul>
+              <li><a href="#">联系银行</a></li>
+              <li><a href="#">帮助中心</a></li>
+              <li><a href="#">博客</a></li>
+              <li><a href="#">安全中心</a></li>
+              <li><a href="#">外籍客户服务</a></li>
+            </ul>
+          </div>
+          <div class="footer-col-sub">
+            <h4>所在地</h4>
+            <div class="footer-location-row">
+              <img style="width: 14px; height: 14px;" src="images/locationcursor.svg" alt="">
+              别洛列琴斯克
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="container">
+      <hr class="footer-divider">
+    </div>
+    <div class="container">
+      <div class="footer-legal">
+        <p>© 2026-2026. 股份公司《哈拉银行》，官方网站。俄罗斯银行总牌照第0000号，签发日期：2026年1月1日。
+          股份公司《哈拉银行》是强制存款保险体系的参与者。关于与个人签订的银行存款协议利率的信息。
+          企业信息披露中心。作为专业证券市场参与者的信息披露。
+          关于对银行拥有控制权或重大影响力的人员信息。</p>
+      </div>
+    </div>
+  </footer>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const swiper = new Swiper('.insurance-slider', {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        navigation: {
+          nextEl: '.swiper-button-next-custom',
+          prevEl: '.swiper-button-prev-custom',
+        },
+        breakpoints: {
+          768: { slidesPerView: 2 },
+          1024: { slidesPerView: 3 }
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>
