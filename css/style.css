@@ -1,9 +1,5 @@
-/* =========================
-   СЕКЦИЯ "СЕРВИСЫ"
-========================= */
-body {
+html{
   scroll-behavior: smooth;
-
 }
 
 .services-2 {
@@ -19,7 +15,6 @@ body {
     margin-bottom: 42px;
 }
 
-/* ОСНОВНОЙ GRID */
 .services2-grid {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -27,9 +22,6 @@ body {
     align-items: stretch;
 }
 
-/* =========================
-   ЛЕВАЯ КАРТОЧКА
-========================= */
 
 .exchange-card {
     background: #f3f3f3;
@@ -38,7 +30,6 @@ body {
     height: 100%;
 }
 
-/* Верхняя часть */
 .exchange-header {
     display: flex;
     justify-content: space-between;
@@ -62,9 +53,6 @@ body {
     font-size: 14px;
 }
 
-/* =========================
-   ТАБЛИЦА ВАЛЮТ
-========================= */
 
 .exchange-table {
     display: flex;
@@ -99,7 +87,6 @@ body {
     font-weight: 500;
 }
 
-/* Валюта */
 .currency {
     display: flex;
     align-items: center;
@@ -124,7 +111,6 @@ body {
     margin-top: 2px;
 }
 
-/* Ссылка */
 .more {
     display: inline-block;
     margin-top: 24px;
@@ -137,7 +123,6 @@ body {
     text-decoration: underline;
 }
 
-/* Подпись */
 .note {
     margin-top: 16px;
     font-size: 14px;
@@ -145,9 +130,6 @@ body {
     line-height: 1.5;
 }
 
-/* =========================
-   ПРАВАЯ КОЛОНКА
-========================= */
 
 .services-right {
     display: grid;
@@ -156,7 +138,6 @@ body {
     height: 100%;
 }
 
-/* Карточки */
 .service-box {
     background: #F2F2F2;
     border-radius: 18px;
@@ -185,7 +166,6 @@ body {
     color: #333;
 }
 
-/* Тёмная карточка */
 .service-box.dark {
     background: #000;
     color: #fff;
