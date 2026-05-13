@@ -38,34 +38,23 @@ body {
 
 .cards {
     margin-bottom: 109px;
-
     display: grid;
-
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-
     gap: 32px;
-
     width: 100%;
 }
 
 .card {
     background: #f3f3f3;
     color: #000;
-
     border-radius: 20px;
-
     padding: 24px;
-
     min-height: 420px;
     width: 100%;
-
     box-sizing: border-box;
-
     display: flex;
     flex-direction: column;
-
     transition: transform 0.35s ease;
-
     min-width: 0;
 }
 
@@ -79,17 +68,11 @@ body {
 
 .badge {
     align-self: flex-start;
-
     font-size: 14px;
-
     padding: 5px 12px;
-
     border-radius: 8px;
-
     color: #fff;
-
     background: linear-gradient(90deg, #0686FE, #045098);
-
     margin-bottom: 14px;
 }
 
@@ -97,16 +80,13 @@ body {
     font-size: 24px;
     font-weight: 700;
     line-height: 1.3;
-
     margin-bottom: 10px;
 }
 
 .desc {
     font-size: 15px;
     color: #6E6E6E;
-
     margin-bottom: 12px;
-
     line-height: 1.5;
 }
 
@@ -126,43 +106,31 @@ body {
 
 .price {
     margin-top: auto;
-
     font-size: 16px;
     font-weight: 700;
-
     color: #108BFF;
-
     margin-bottom: 14px;
 }
 
 .btn-outline,
 .btn-fill {
     border-radius: 10px;
-
     padding: 12px;
-
     font-weight: 600;
-
     cursor: pointer;
-
     transition: 0.3s ease;
-
     width: 100%;
 }
 
 .btn-outline {
     border: 1px solid #108BFF;
-
     background: transparent;
-
     color: #000;
 }
 
 .btn-fill {
     border: none;
-
     background: linear-gradient(90deg, #0686FE, #045098);
-
     color: #fff;
 }
 

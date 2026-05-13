@@ -3,8 +3,6 @@
   background-color: #fff;
 }
 
-/* TITLE */
-
 .halla-mobile__title {
   margin: 0 0 28px;
   font-size: 52px;
@@ -12,9 +10,6 @@
   line-height: 1;
   color: #000;
 }
-
-/* GRID */
-
 .halla-mobile__grid {
   display: grid;
   grid-template-columns: 461px minmax(320px, 825px);
@@ -34,7 +29,6 @@
   overflow: hidden;
   border-radius: 28px;
 }
-
 .card-mobile--left {
   width: 100%;
   max-width: 461px;
