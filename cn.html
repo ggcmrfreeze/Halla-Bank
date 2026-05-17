@@ -15,6 +15,8 @@
   <link rel="stylesheet" href="components/header.css">
   <link rel="stylesheet" href="components/lastsection.css">
   <link rel="stylesheet" href="components/footer.css">
+  <link rel="stylesheet" href="components/modal.css">
+  <link rel="stylesheet" href="components/survey.css">
 </head>
 
 <body>
@@ -30,8 +32,8 @@
         <a href="#big_business">企业服务</a>
       </nav>
       <div class="actions">
-        <button class="btn secondary">成为客户</button>
-        <button class="btn primary">登录</button>
+        <button class="btn secondary" onclick="openModal('modal-register')">成为客户</button>
+        <button class="btn primary" onclick="openModal('modal-login')">登录</button>
       </div>
     </div>
   </header>
@@ -380,9 +382,49 @@
 
       </div>
     </div>
-    <div class="container">
-      <hr class="footer-divider">
+
+  <!-- Опросник в футере -->
+  <div class="container">
+    <div class="footer-survey" id="survey-block-cn">
+      <div class="survey-form" id="survey-form-cn">
+        <div class="survey-header">
+          <h3 class="survey-title">评价我们的网站</h3>
+          <p class="survey-sub">只需不到一分钟。您的意见帮助我们持续改进。</p>
+        </div>
+        <div class="survey-body">
+          <div class="survey-q" id="sq1_cn">
+  <p class="survey-q__label"><span class="survey-q__num">1</span>您觉得网站使用起来方便吗？</p>
+  <div class="survey-stars" data-id="q1_cn"><button type="button" class="star-btn" data-val="1" onclick="rateStar('q1_cn',1)">&#9733;</button><button type="button" class="star-btn" data-val="2" onclick="rateStar('q1_cn',2)">&#9733;</button><button type="button" class="star-btn" data-val="3" onclick="rateStar('q1_cn',3)">&#9733;</button><button type="button" class="star-btn" data-val="4" onclick="rateStar('q1_cn',4)">&#9733;</button><button type="button" class="star-btn" data-val="5" onclick="rateStar('q1_cn',5)">&#9733;</button></div>
+</div>
+<div class="survey-q" id="sq2_cn">
+  <p class="survey-q__label"><span class="survey-q__num">2</span>您找到了所需的信息了吗？</p>
+  <div class="survey-options"><button type="button" class="survey-opt" onclick="selectOpt(this)">是，立刻找到</button><button type="button" class="survey-opt" onclick="selectOpt(this)">是，但花了些时间</button><button type="button" class="survey-opt" onclick="selectOpt(this)">部分找到</button><button type="button" class="survey-opt" onclick="selectOpt(this)">没有</button></div>
+</div>
+<div class="survey-q" id="sq3_cn">
+  <p class="survey-q__label"><span class="survey-q__num">3</span>您最感兴趣的服务是？</p>
+  <div class="survey-options"><button type="button" class="survey-opt" onclick="selectOpt(this)">存款与银行卡</button><button type="button" class="survey-opt" onclick="selectOpt(this)">贷款与房贷</button><button type="button" class="survey-opt" onclick="selectOpt(this)">投资理财</button><button type="button" class="survey-opt" onclick="selectOpt(this)">移动通信</button></div>
+</div>
+<div class="survey-q" id="sq4_cn">
+  <p class="survey-q__label"><span class="survey-q__num">4</span>您会向朋友推荐我们吗？（1到10分）</p>
+  <div class="survey-nps" data-id="q4_cn"><button type="button" class="nps-btn" data-val="1" onclick="rateNps('q4_cn',1)">1</button><button type="button" class="nps-btn" data-val="2" onclick="rateNps('q4_cn',2)">2</button><button type="button" class="nps-btn" data-val="3" onclick="rateNps('q4_cn',3)">3</button><button type="button" class="nps-btn" data-val="4" onclick="rateNps('q4_cn',4)">4</button><button type="button" class="nps-btn" data-val="5" onclick="rateNps('q4_cn',5)">5</button><button type="button" class="nps-btn" data-val="6" onclick="rateNps('q4_cn',6)">6</button><button type="button" class="nps-btn" data-val="7" onclick="rateNps('q4_cn',7)">7</button><button type="button" class="nps-btn" data-val="8" onclick="rateNps('q4_cn',8)">8</button><button type="button" class="nps-btn" data-val="9" onclick="rateNps('q4_cn',9)">9</button><button type="button" class="nps-btn" data-val="10" onclick="rateNps('q4_cn',10)">10</button></div>
+  <div class="nps-labels"><span>😞 不太可能</span><span>一定会 😊</span></div>
+</div>
+<div class="survey-q" id="sq5_cn">
+  <p class="survey-q__label"><span class="survey-q__num">5</span>您的建议或意见</p>
+  <textarea class="survey-textarea" placeholder="请告诉我们可以改进的地方..." rows="3"></textarea>
+</div>
+
+          <button class="survey-submit" onclick="submitSurvey('cn')">提交反馈</button>
+        </div>
+      </div>
+      <div class="survey-thanks" id="survey-thanks-cn" style="display:none">
+        <div class="survey-thanks__icon">&#10003;</div>
+        <h3>感谢您的反馈！</h3>
+        <p>我们珍视您的意见，并将努力改善我们的服务。</p>
+      </div>
     </div>
+  </div>
+  <div class="container"><hr class="footer-divider footer-divider--survey"></div>
     <div class="container">
       <div class="footer-legal">
         <p>© 2026-2026. 股份公司《哈拉银行》，官方网站。俄罗斯银行总牌照第0000号，签发日期：2026年1月1日。
@@ -410,6 +452,124 @@
         }
       });
     });
+  </script>
+
+  <!-- 登录弹窗 -->
+  <div class="modal-overlay" id="modal-login">
+    <div class="modal">
+      <button class="modal__close" onclick="closeModal('modal-login')">&#x2715;</button>
+      <div class="modal__logo"><img src="images/Logo.png" alt="Halla"></div>
+      <h2 class="modal__title">欢迎回来</h2>
+      <p class="modal__subtitle">登录您的哈拉银行账户</p>
+      <div class="modal__tabs">
+        <button class="modal__tab active" onclick="switchTab(this, 'tab-phone-l')">手机登录</button>
+        <button class="modal__tab" onclick="switchTab(this, 'tab-login-l')">账号登录</button>
+      </div>
+      <div class="modal__step active" id="tab-phone-l">
+        <div class="modal__field">
+          <label>手机号码</label>
+          <input type="tel" placeholder="+7 (___) ___-__-__">
+        </div>
+        <button class="modal__btn-primary">获取验证码</button>
+        <p class="modal__note">验证码将发送至您的手机号</p>
+      </div>
+      <div class="modal__step" id="tab-login-l">
+        <div class="modal__field">
+          <label>账号或邮箱</label>
+          <input type="text" placeholder="example@mail.com">
+        </div>
+        <div class="modal__field">
+          <label>密码</label>
+          <input type="password" placeholder="••••••••">
+        </div>
+        <button class="modal__btn-primary">登录</button>
+        <p class="modal__footer-text"><a href="#">忘记密码？</a></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 注册弹窗 -->
+  <div class="modal-overlay" id="modal-register">
+    <div class="modal">
+      <button class="modal__close" onclick="closeModal('modal-register')">&#x2715;</button>
+      <div class="modal__logo"><img src="images/Logo.png" alt="Halla"></div>
+      <h2 class="modal__title">成为客户</h2>
+      <p class="modal__subtitle">几分钟内开立账户</p>
+      <div class="modal__field">
+        <label>姓名</label>
+        <input type="text" placeholder="张三">
+      </div>
+      <div class="modal__field">
+        <label>手机号码</label>
+        <input type="tel" placeholder="+7 (___) ___-__-__">
+      </div>
+      <div class="modal__field">
+        <label>电子邮箱</label>
+        <input type="email" placeholder="example@mail.com">
+      </div>
+      <button class="modal__btn-primary">继续</button>
+      <p class="modal__note">点击按钮即表示您同意<a href="#" style="color:#2d8cff;text-decoration:none">服务条款</a></p>
+      <div class="modal__footer-text">已有账户？<a href="#" onclick="openModal('modal-login'); closeModal('modal-register'); return false;">立即登录</a></div>
+    </div>
+  </div>
+
+  <script>
+    function openModal(id) {
+      document.getElementById(id).classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeModal(id) {
+      document.getElementById(id).classList.remove('active');
+      document.body.style.overflow = '';
+    }
+    function switchTab(btn, tabId) {
+      btn.closest('.modal__tabs').querySelectorAll('.modal__tab').forEach(t => t.classList.remove('active'));
+      btn.classList.add('active');
+      btn.closest('.modal').querySelectorAll('.modal__step').forEach(s => s.classList.remove('active'));
+      document.getElementById(tabId).classList.add('active');
+    }
+    document.querySelectorAll('.modal-overlay').forEach(overlay => {
+      overlay.addEventListener('click', function(e) {
+        if (e.target === this) closeModal(this.id);
+      });
+    });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        document.querySelectorAll('.modal-overlay.active').forEach(m => closeModal(m.id));
+      }
+    });
+  </script>
+
+  <script>
+    function rateStar(id, val) {
+      document.querySelectorAll('[data-id="' + id + '"] .star-btn').forEach(function(b) {
+        b.classList.toggle('active', parseInt(b.dataset.val) <= val);
+      });
+    }
+    function rateNps(id, val) {
+      document.querySelectorAll('[data-id="' + id + '"] .nps-btn').forEach(function(b) {
+        b.classList.toggle('active', parseInt(b.dataset.val) === val);
+      });
+    }
+    function selectOpt(btn) {
+      btn.closest('.survey-options').querySelectorAll('.survey-opt').forEach(function(b) {
+        b.classList.remove('active');
+      });
+      btn.classList.add('active');
+    }
+    function submitSurvey(lang) {
+      var form = document.getElementById('survey-form-' + lang);
+      var thanks = document.getElementById('survey-thanks-' + lang);
+      form.style.opacity = '0';
+      form.style.transition = 'opacity 0.3s';
+      setTimeout(function() {
+        form.style.display = 'none';
+        thanks.style.display = 'block';
+        thanks.style.opacity = '0';
+        thanks.style.transition = 'opacity 0.3s';
+        setTimeout(function() { thanks.style.opacity = '1'; }, 20);
+      }, 300);
+    }
   </script>
 </body>
 

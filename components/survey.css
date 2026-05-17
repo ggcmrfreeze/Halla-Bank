@@ -1,0 +1,255 @@
+.footer-survey {
+  padding: 40px 48px 8px;
+  font-family: 'Nunito', sans-serif;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.survey-header {
+  margin-bottom: 28px;
+}
+
+.survey-title {
+  font-size: 22px;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 6px;
+}
+
+.survey-sub {
+  font-size: 14px;
+  color: #6e6e6e;
+}
+
+.survey-body {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  align-items: start;
+}
+
+.survey-q {
+  background: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  border-radius: 14px;
+  padding: 20px;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.survey-q__label {
+  font-size: 13px;
+  color: #c0c0c0;
+  margin-bottom: 14px;
+  line-height: 1.4;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.survey-q__num {
+  background: #2d8cff;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.survey-stars {
+  display: flex;
+  gap: 4px;
+}
+
+.star-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #3a3a3a;
+  cursor: pointer;
+  transition: color 0.15s, transform 0.15s;
+  padding: 0;
+  line-height: 1;
+}
+
+.star-btn:hover,
+.star-btn.active {
+  color: #f5a623;
+  transform: scale(1.15);
+}
+
+.survey-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.survey-opt {
+  background: #2a2a2a;
+  border: 1px solid #3a3a3a;
+  border-radius: 20px;
+  padding: 6px 12px;
+  color: #bfbfbf;
+  font-family: 'Nunito', sans-serif;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+}
+
+.survey-opt:hover {
+  background: #333;
+  color: #fff;
+}
+
+.survey-opt.active {
+  background: #2d8cff;
+  border-color: #2d8cff;
+  color: #fff;
+}
+
+.survey-nps {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.nps-btn {
+  background: #2a2a2a;
+  border: 1px solid #3a3a3a;
+  border-radius: 8px;
+  width: 32px;
+  height: 32px;
+  color: #bfbfbf;
+  font-family: 'Nunito', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+
+.nps-btn:hover {
+  background: #333;
+  color: #fff;
+}
+
+.nps-btn.active {
+  background: #2d8cff;
+  border-color: #2d8cff;
+  color: #fff;
+}
+
+.nps-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  color: #555;
+  margin-top: 6px;
+}
+
+.survey-textarea {
+  width: 100%;
+  background: #2a2a2a;
+  border: 1px solid #3a3a3a;
+  border-radius: 10px;
+  padding: 10px 12px;
+  color: #fff;
+  font-family: 'Nunito', sans-serif;
+  font-size: 13px;
+  resize: vertical;
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.2s;
+  min-height: 80px;
+}
+
+.survey-textarea:focus {
+  border-color: #2d8cff;
+}
+
+.survey-textarea::placeholder {
+  color: #555;
+}
+
+.survey-submit-row {
+  margin-top: 20px;
+}
+
+.survey-submit {
+  background: #2d8cff;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 32px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+}
+
+.survey-submit:hover {
+  background: #1a7ae8;
+  transform: translateY(-2px);
+}
+
+.survey-submit:active {
+  transform: translateY(0);
+}
+
+.survey-thanks {
+  text-align: center;
+  padding: 48px 0;
+}
+
+.survey-thanks__icon {
+  width: 56px;
+  height: 56px;
+  background: #2d8cff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  color: #fff;
+  margin: 0 auto 20px;
+}
+
+.survey-thanks h3 {
+  font-size: 20px;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.survey-thanks p {
+  font-size: 14px;
+  color: #6e6e6e;
+}
+
+.footer-divider--survey {
+  margin-top: 0;
+}
+
+@media (max-width: 1200px) {
+  .survey-body {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-survey {
+    padding: 32px 20px 8px;
+  }
+  .survey-body {
+    grid-template-columns: 1fr;
+  }
+  .survey-submit {
+    width: 100%;
+  }
+}

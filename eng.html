@@ -15,6 +15,8 @@
   <link rel="stylesheet" href="components/header.css">
   <link rel="stylesheet" href="components/lastsection.css">
   <link rel="stylesheet" href="components/footer.css">
+  <link rel="stylesheet" href="components/modal.css">
+  <link rel="stylesheet" href="components/survey.css">
 </head>
 <body>
   <header class="header">
@@ -29,8 +31,8 @@
         <a href="#big_business">Corporate</a>
       </nav>
       <div class="actions">
-        <button class="btn secondary">Become a Client</button>
-        <button class="btn primary">Log In</button>
+        <button class="btn secondary" onclick="openModal('modal-register')">Become a Client</button>
+        <button class="btn primary" onclick="openModal('modal-login')">Log In</button>
       </div>
     </div>
   </header>
@@ -379,9 +381,49 @@
 
       </div>
     </div>
-    <div class="container">
-      <hr class="footer-divider">
+
+  <!-- Опросник в футере -->
+  <div class="container">
+    <div class="footer-survey" id="survey-block-en">
+      <div class="survey-form" id="survey-form-en">
+        <div class="survey-header">
+          <h3 class="survey-title">Rate our website</h3>
+          <p class="survey-sub">It takes less than a minute. Your feedback helps us improve.</p>
+        </div>
+        <div class="survey-body">
+          <div class="survey-q" id="sq1_en">
+  <p class="survey-q__label"><span class="survey-q__num">1</span>How easy is it to use our website?</p>
+  <div class="survey-stars" data-id="q1_en"><button type="button" class="star-btn" data-val="1" onclick="rateStar('q1_en',1)">&#9733;</button><button type="button" class="star-btn" data-val="2" onclick="rateStar('q1_en',2)">&#9733;</button><button type="button" class="star-btn" data-val="3" onclick="rateStar('q1_en',3)">&#9733;</button><button type="button" class="star-btn" data-val="4" onclick="rateStar('q1_en',4)">&#9733;</button><button type="button" class="star-btn" data-val="5" onclick="rateStar('q1_en',5)">&#9733;</button></div>
+</div>
+<div class="survey-q" id="sq2_en">
+  <p class="survey-q__label"><span class="survey-q__num">2</span>Did you find the information you were looking for?</p>
+  <div class="survey-options"><button type="button" class="survey-opt" onclick="selectOpt(this)">Yes, right away</button><button type="button" class="survey-opt" onclick="selectOpt(this)">Yes, but not immediately</button><button type="button" class="survey-opt" onclick="selectOpt(this)">Partially</button><button type="button" class="survey-opt" onclick="selectOpt(this)">No</button></div>
+</div>
+<div class="survey-q" id="sq3_en">
+  <p class="survey-q__label"><span class="survey-q__num">3</span>Which service interests you the most?</p>
+  <div class="survey-options"><button type="button" class="survey-opt" onclick="selectOpt(this)">Deposits & Cards</button><button type="button" class="survey-opt" onclick="selectOpt(this)">Loans & Mortgage</button><button type="button" class="survey-opt" onclick="selectOpt(this)">Investments</button><button type="button" class="survey-opt" onclick="selectOpt(this)">Mobile Service</button></div>
+</div>
+<div class="survey-q" id="sq4_en">
+  <p class="survey-q__label"><span class="survey-q__num">4</span>Would you recommend us to friends? (1 to 10)</p>
+  <div class="survey-nps" data-id="q4_en"><button type="button" class="nps-btn" data-val="1" onclick="rateNps('q4_en',1)">1</button><button type="button" class="nps-btn" data-val="2" onclick="rateNps('q4_en',2)">2</button><button type="button" class="nps-btn" data-val="3" onclick="rateNps('q4_en',3)">3</button><button type="button" class="nps-btn" data-val="4" onclick="rateNps('q4_en',4)">4</button><button type="button" class="nps-btn" data-val="5" onclick="rateNps('q4_en',5)">5</button><button type="button" class="nps-btn" data-val="6" onclick="rateNps('q4_en',6)">6</button><button type="button" class="nps-btn" data-val="7" onclick="rateNps('q4_en',7)">7</button><button type="button" class="nps-btn" data-val="8" onclick="rateNps('q4_en',8)">8</button><button type="button" class="nps-btn" data-val="9" onclick="rateNps('q4_en',9)">9</button><button type="button" class="nps-btn" data-val="10" onclick="rateNps('q4_en',10)">10</button></div>
+  <div class="nps-labels"><span>😞 Unlikely</span><span>Definitely 😊</span></div>
+</div>
+<div class="survey-q" id="sq5_en">
+  <p class="survey-q__label"><span class="survey-q__num">5</span>Your suggestions or comments</p>
+  <textarea class="survey-textarea" placeholder="Tell us what can be improved..." rows="3"></textarea>
+</div>
+
+          <button class="survey-submit" onclick="submitSurvey('en')">Submit feedback</button>
+        </div>
+      </div>
+      <div class="survey-thanks" id="survey-thanks-en" style="display:none">
+        <div class="survey-thanks__icon">&#10003;</div>
+        <h3>Thank you for your feedback!</h3>
+        <p>We appreciate your input and will work on improving our service.</p>
+      </div>
     </div>
+  </div>
+  <div class="container"><hr class="footer-divider footer-divider--survey"></div>
     <div class="container">
       <div class="footer-legal">
         <p>© 2026-2026. JSC «Halla Bank», official website. General License of the Bank of Russia No. 0000 dated January 1, 2026.
@@ -409,6 +451,124 @@
         }
       });
     });
+  </script>
+
+  <!-- Login Modal -->
+  <div class="modal-overlay" id="modal-login">
+    <div class="modal">
+      <button class="modal__close" onclick="closeModal('modal-login')">&#x2715;</button>
+      <div class="modal__logo"><img src="images/Logo.png" alt="Halla"></div>
+      <h2 class="modal__title">Welcome back</h2>
+      <p class="modal__subtitle">Sign in to your Halla Bank account</p>
+      <div class="modal__tabs">
+        <button class="modal__tab active" onclick="switchTab(this, 'tab-phone-l')">By phone</button>
+        <button class="modal__tab" onclick="switchTab(this, 'tab-login-l')">By login</button>
+      </div>
+      <div class="modal__step active" id="tab-phone-l">
+        <div class="modal__field">
+          <label>Phone number</label>
+          <input type="tel" placeholder="+7 (___) ___-__-__">
+        </div>
+        <button class="modal__btn-primary">Get code</button>
+        <p class="modal__note">An SMS code will be sent to your phone number</p>
+      </div>
+      <div class="modal__step" id="tab-login-l">
+        <div class="modal__field">
+          <label>Login or e-mail</label>
+          <input type="text" placeholder="example@mail.com">
+        </div>
+        <div class="modal__field">
+          <label>Password</label>
+          <input type="password" placeholder="••••••••">
+        </div>
+        <button class="modal__btn-primary">Log In</button>
+        <p class="modal__footer-text"><a href="#">Forgot your password?</a></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Register Modal -->
+  <div class="modal-overlay" id="modal-register">
+    <div class="modal">
+      <button class="modal__close" onclick="closeModal('modal-register')">&#x2715;</button>
+      <div class="modal__logo"><img src="images/Logo.png" alt="Halla"></div>
+      <h2 class="modal__title">Become a Client</h2>
+      <p class="modal__subtitle">Open an account in minutes</p>
+      <div class="modal__field">
+        <label>Full name</label>
+        <input type="text" placeholder="John Smith">
+      </div>
+      <div class="modal__field">
+        <label>Phone number</label>
+        <input type="tel" placeholder="+7 (___) ___-__-__">
+      </div>
+      <div class="modal__field">
+        <label>E-mail</label>
+        <input type="email" placeholder="example@mail.com">
+      </div>
+      <button class="modal__btn-primary">Continue</button>
+      <p class="modal__note">By clicking the button you agree to the <a href="#" style="color:#2d8cff;text-decoration:none">terms of service</a></p>
+      <div class="modal__footer-text">Already have an account? <a href="#" onclick="openModal('modal-login'); closeModal('modal-register'); return false;">Log In</a></div>
+    </div>
+  </div>
+
+  <script>
+    function openModal(id) {
+      document.getElementById(id).classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeModal(id) {
+      document.getElementById(id).classList.remove('active');
+      document.body.style.overflow = '';
+    }
+    function switchTab(btn, tabId) {
+      btn.closest('.modal__tabs').querySelectorAll('.modal__tab').forEach(t => t.classList.remove('active'));
+      btn.classList.add('active');
+      btn.closest('.modal').querySelectorAll('.modal__step').forEach(s => s.classList.remove('active'));
+      document.getElementById(tabId).classList.add('active');
+    }
+    document.querySelectorAll('.modal-overlay').forEach(overlay => {
+      overlay.addEventListener('click', function(e) {
+        if (e.target === this) closeModal(this.id);
+      });
+    });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        document.querySelectorAll('.modal-overlay.active').forEach(m => closeModal(m.id));
+      }
+    });
+  </script>
+
+  <script>
+    function rateStar(id, val) {
+      document.querySelectorAll('[data-id="' + id + '"] .star-btn').forEach(function(b) {
+        b.classList.toggle('active', parseInt(b.dataset.val) <= val);
+      });
+    }
+    function rateNps(id, val) {
+      document.querySelectorAll('[data-id="' + id + '"] .nps-btn').forEach(function(b) {
+        b.classList.toggle('active', parseInt(b.dataset.val) === val);
+      });
+    }
+    function selectOpt(btn) {
+      btn.closest('.survey-options').querySelectorAll('.survey-opt').forEach(function(b) {
+        b.classList.remove('active');
+      });
+      btn.classList.add('active');
+    }
+    function submitSurvey(lang) {
+      var form = document.getElementById('survey-form-' + lang);
+      var thanks = document.getElementById('survey-thanks-' + lang);
+      form.style.opacity = '0';
+      form.style.transition = 'opacity 0.3s';
+      setTimeout(function() {
+        form.style.display = 'none';
+        thanks.style.display = 'block';
+        thanks.style.opacity = '0';
+        thanks.style.transition = 'opacity 0.3s';
+        setTimeout(function() { thanks.style.opacity = '1'; }, 20);
+      }, 300);
+    }
   </script>
 </body>
 
